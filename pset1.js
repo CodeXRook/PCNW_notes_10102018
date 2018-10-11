@@ -7,17 +7,20 @@ if that number is > 100, should return NaN
 if invalid input given, return -1
 ******************/
 
-function myAge( ageNow, numYears ) {
-       
-}
-
+/*
 const myAge = function(ageNow, numYears) {
-    //  SOLVE IT
+    return ageNow + numYears;
 }
+console.log('myAge(28, 12)', myAge(28, 12));
+*/
 
 const myAge2 = (ageNow, numYears) => {
-    // SOLVE IT
+    return ageNow + numYears;
 }
+console.log('myAge2(28, 12)', myAge2(28, 12));
+
+const myAge3 = (ageNow, numYears) => ageNow + numYears;
+console.log('myAge3(28, 12)', myAge3(28, 12));
 
 
 
@@ -33,11 +36,13 @@ Concatenating string variables
 - Call myConcatenate function
 ******************/
 
-function myConcatenate( firstStr, secondStr, thirdStr ) {
-    
-}
+const myConcatenate2 = (firstStr, secondStr, thirdStr) => firstStr + " " + secondStr + " " + thirdStr;
+console.log('myConcatenate', myConcatenate2('I', 'am', 'iron man')); // 'I am iron man'
 
-myConcatenate('I', 'am', 'iron man'); // 'I am iron man'
+const myConcatenate3 = (firstStr, secondStr, thirdStr) => {
+    return firstStr + " " + secondStr + " " + thirdStr;
+}
+console.log('myConcatenate', myConcatenate3('I', 'am', 'iron man')); // 'I am iron man'
 
 /******************
 Subtract Function
@@ -48,6 +53,11 @@ Ensure that both of the inputs are numbers
 
 function subtract(a,b) {
     
+}
+
+const subtract2 = (a, b) => a - b;
+const subtract3 = (a, b) => {
+    return a - b;
 }
 
 /******************
@@ -65,12 +75,31 @@ function areaOfaCircle(radius){
     
 }    
 
+const areaOfaCircle2 = radius => {
+    return Math.PI * radius ** 2;
+}
+
+const areaOfaCircle3 = (radius) => {
+    return Math.PI * radius ** 2;
+}
+
+const areaOfaCircle4 = (radius) => Math.PI * radius ** 2;
+const areaOfaCircle5 = radius => Math.PI * radius ** 2;
+
 /******************
 Temperature Converter Fahrenheit to Celsius
 Create a function called fahrenheitToCelsius:
 Now store a fahrenheit temperature into a variable.
 Convert it to celsius and output "NN°F is NN°C."
 ******************/
+
+const fahrenheitToCelsius = (F) => `${F}°F is ${(F-32) * 5/9}°C.`;
+const fahrenheitToCelsius2 = F => {
+    const C = (F-32) * 5/9
+    const message = `${F}°F is ${C}°C.`;
+
+    return message;
+}
 
 
 /******************
